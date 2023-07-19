@@ -1,0 +1,47 @@
+html,
+body {
+    background-color: #1D1D1D;
+    inset: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    /* transition: opacity 1s ease-in-out; */
+}
+
+/* body.fade-out {
+  opacity: 0;
+} */
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: spin 5s linear infinite;
+}
+
+@keyframes zooooom {
+    from {
+        transform: scale(1)
+    }
+
+    to {
+        transform: scale(8)
+    }
+}
+
+#loading.init_done img {
+    animation: 2s ease-in-out 0s 1 forwards zooooom;
+    opacity: .2;
+}
